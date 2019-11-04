@@ -13,8 +13,19 @@ public class interactRunner {
 				String first = reader.next();
 				System.out.println("Enter second arg: ");
 				String second = reader.next();
+				System.out.println("Enter sign: ");
+				String sign = reader.next();
 				calc.add(Integer.valueOf(first), Integer.valueOf(second));
-				System.out.println("Result: " + calc.getResult());
+				if (sign.equals("+"))
+					System.out.println("Result: " + calc.getResult_sum());
+				if (sign.equals("-"))
+					System.out.println("Result: " + calc.getResult_sub());
+				if (sign.equals("*"))
+					System.out.println("Result: " + calc.getResult_mult());
+				if (sign.equals("/"))
+					System.out.println("Result: " + calc.getResult_div());
+				if (sign.equals("^"))
+					System.out.println("Result: " + calc.getResult_pow());
 				calc.cleanResult();
 				System.out.println("Exit: yes/no ");
 				exit = reader.next();
